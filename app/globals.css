@@ -16,3 +16,21 @@ body {
   background-color: var(--background);
   color: var(--foreground);
 }
+
+@utility nav-link {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #111827;
+  }
+
+  &.active {
+    color: #2563eb;
+    font-weight: 700;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 4px;
+  }
+}
