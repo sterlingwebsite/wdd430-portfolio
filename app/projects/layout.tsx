@@ -1,3 +1,4 @@
+// app/projects/layout.tsx
 import Link from 'next/link';
 
 export default function ProjectsLayout({
@@ -14,15 +15,23 @@ export default function ProjectsLayout({
               href="/projects" 
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Overview
+              All Projects
             </Link>
           </li>
           <li>
             <Link 
-              href="/projects/settings" 
+              href="/projects/opensource" 
               className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
             >
-              Settings
+              Open Source
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/projects/school" 
+              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            >
+              School Projects
             </Link>
           </li>
         </ul>
