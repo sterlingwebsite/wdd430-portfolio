@@ -9,7 +9,6 @@ export async function GET(request: NextRequest, { params }: RouteContext) {
   try {
     const resolvedParams = await params;
     const rawId = resolvedParams.id;
-
     const id = Number(rawId);
 
     if (Number.isNaN(id)) {
@@ -19,7 +18,7 @@ export async function GET(request: NextRequest, { params }: RouteContext) {
       );
     }
 
-    const project = getProjectById(id);
+    const project = await getProjectById(id);
 
     if (!project) {
       return NextResponse.json(
