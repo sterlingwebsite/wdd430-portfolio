@@ -1,16 +1,22 @@
-// app/projects/page.tsx
 import { Project } from '@/lib/projects-db';
 
+import { sql } from '@vercel/postgres';
+
+export const dynamic = 'force-dynamic';
+
 async function fetchProjects(): Promise<Project[]> {
-  const res = await fetch('http://localhost:3000/api/projects', {
-    cache: 'no-store',
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch projects');
+  try {
+    const { rows } = await sql<Project>`
+      SELECT id, title, type, description, technologies, link 
+      FROM projects 
+      ORDER BY title ASC;
+    `;
+    
+    return rows;
+  } catch (error) {
+    console.error('Database connection error:', error);
+    throw new Error('Failed to retrieve project rows from Vercel Postgres');
   }
-
-  return res.json();
 }
 
 export default async function ProjectsOverviewPage() {
