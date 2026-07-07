@@ -2,7 +2,7 @@ import { Project } from '@/lib/projects-db';
 
 async function fetchOpenSourceProjects(): Promise<Project[]> {
   const res = await fetch('http://localhost:3000/api/projects?type=opensource', {
-    cache: 'no-store', // Always get fresh data
+    cache: 'no-store',
   });
 
   if (!res.ok) {
