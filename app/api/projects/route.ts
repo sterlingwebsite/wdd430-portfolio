@@ -10,6 +10,7 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(projects, { status: 200 });
   } catch (error) {
+    console.error('API projects list error:', error);
     return NextResponse.json(
       { error: 'Internal Server Error' }, 
       { status: 500 }

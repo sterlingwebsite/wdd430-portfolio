@@ -23,7 +23,7 @@ export default async function EditProjectPage(props: EditPageProps) {
         Edit {project.title}
       </h1>
       <p className="text-gray-600 dark:text-gray-300 mb-8">
-        Modify the fields below to update this project's record in your database.
+        Modify the fields below to update this project&apos;s record in your database.
       </p>
 
       <form action={boundUpdateAction} className="space-y-6">

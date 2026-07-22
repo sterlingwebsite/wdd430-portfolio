@@ -9,7 +9,7 @@ export default function About() {
 
       <div className="space-y-4 text-gray-600 text-lg leading-relaxed mb-10">
         <p>
-          Hi, I'm Sterling Steele — a full‑stack developer learning modern
+          Hi, I&apos;m Sterling Steele — a full‑stack developer learning modern
           web technologies like Next.js, React, TypeScript, and Tailwind CSS.
           I enjoy building clean, efficient applications and exploring new tools
           that make development faster and more enjoyable.

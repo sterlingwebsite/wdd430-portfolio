@@ -98,7 +98,7 @@ export default async function ProjectsOverviewPage(props: PageProps) {
       </div>
 
       {projects.length === 0 ? (
-        <p className="text-gray-500 dark:text-gray-400">No projects found matching "{query}".</p>
+        <p className="text-gray-500 dark:text-gray-400">No projects found matching &quot;{query}&quot;.</p>
       ) : (
         <>
           <div className="grid gap-6 sm:grid-cols-2">

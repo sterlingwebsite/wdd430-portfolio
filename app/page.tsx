@@ -26,8 +26,8 @@ export default function Home() {
           My Portfolio
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-          I'm a full‑stack developer learning Next.js and React. Here are some of
-          the projects I've built recently, showcasing my experience with modern
+          I&apos;m a full‑stack developer learning Next.js and React. Here are some of
+          the projects I&apos;ve built recently, showcasing my experience with modern
           web technologies and deployment workflows.
         </p>
       </section>

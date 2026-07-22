@@ -29,6 +29,7 @@ export async function GET(request: NextRequest, { params }: RouteContext) {
 
     return NextResponse.json(project, { status: 200 });
   } catch (error) {
+    console.error('API Error:', error);
     return NextResponse.json(
       { error: 'Internal Server Error' }, 
       { status: 500 }
