@@ -1,9 +1,27 @@
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getProjectById } from '@/lib/projects-db';
 import EditProjectForm from '@/components/EditProjectForm';
 
 interface EditPageProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata(props: EditPageProps): Promise<Metadata> {
+  const { id } = await props.params;
+  const projectId = Number(id);
+  const project = await getProjectById(projectId);
+
+  if (isNaN(projectId) || !project) {
+    return {
+      title: 'Project Not Found',
+    };
+  }
+
+  return {
+    title: `Edit ${project.title}`,
+    description: `Modify the fields to update ${project.title} inside your database records.`,
+  };
 }
 
 export default async function EditProjectPage(props: EditPageProps) {

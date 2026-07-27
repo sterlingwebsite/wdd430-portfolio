@@ -1,5 +1,11 @@
+import type { Metadata } from 'next';
 import { Suspense } from 'react';
 import SchoolProjectList from '@/components/SchoolProjectList';
+
+export const metadata: Metadata = {
+  title: 'School Projects',
+  description: 'Review coursework projects, database architectures, and academic engineering assignments built by Sterling.',
+};
 
 function SchoolProjectSkeleton() {
   return (

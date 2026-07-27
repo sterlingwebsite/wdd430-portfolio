@@ -1,4 +1,3 @@
-// components/Header.tsx
 import Link from 'next/link';
 import NavLinks from './NavLinks';
 

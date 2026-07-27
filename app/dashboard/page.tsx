@@ -1,6 +1,12 @@
+import type { Metadata } from 'next';
 import { auth } from '@/auth';
 import { SignOutButton } from '@/components/sign-out-button';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: 'Dashboard',
+  description: 'Manage projects and content for Sterling\'s Full-Stack Portfolio.',
+};
 
 export default async function DashboardPage() {
   const session = await auth();

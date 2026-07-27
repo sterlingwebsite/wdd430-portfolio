@@ -16,8 +16,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sterling's Full-Stack Portfolio",
+  title: {
+    default: "Sterling's Full-Stack Portfolio",
+    template: "%s | Sterling's Full-Stack Portfolio",
+  },
   description: "A professional developer portfolio showcasing Next.js, React, and TypeScript applications.",
+  metadataBase: new URL("https://wdd430-portfolio.vercel.app"),
 };
 
 export default function RootLayout({

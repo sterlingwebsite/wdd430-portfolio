@@ -1,4 +1,3 @@
-// app/projects/layout.tsx
 import Link from 'next/link';
 
 export default function ProjectsLayout({

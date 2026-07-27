@@ -2,8 +2,14 @@ import Link from 'next/link';
 import { sql } from '@vercel/postgres';
 import { DeleteButton } from '@/components/DeleteButton';
 import { deleteProject } from '@/lib/actions';
+import type { Metadata } from 'next';
 
 export const revalidate = 0;
+
+export const metadata: Metadata = {
+  title: 'Manage Projects',
+  description: 'Review, modify, or eliminate entries across your portfolio directories.',
+};
 
 export default async function AdminProjectsPage() {
   const { rows: projects } = await sql`

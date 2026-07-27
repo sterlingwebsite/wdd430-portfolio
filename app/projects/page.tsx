@@ -5,8 +5,14 @@ import { Pagination } from '@/components/Pagination';
 import { deleteProject } from '@/lib/actions';
 import Link from 'next/link';
 import { DeleteButton } from '@/components/DeleteButton';
+import type { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
+
+export const metadata: Metadata = {
+  title: 'Projects Overview',
+  description: 'Explore full-stack, open-source, and school development projects built by Sterling.',
+};
 
 const ITEMS_PER_PAGE = 6;
 

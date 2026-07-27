@@ -1,4 +1,10 @@
+import type { Metadata } from 'next';
 import { Project } from '@/lib/projects-db';
+
+export const metadata: Metadata = {
+  title: 'Open Source',
+  description: 'Explore open-source contributions, developer communities, and public software repositories built by Sterling.',
+};
 
 async function fetchOpenSourceProjects(): Promise<Project[]> {
   const res = await fetch('http://localhost:3000/api/projects?type=opensource', {
