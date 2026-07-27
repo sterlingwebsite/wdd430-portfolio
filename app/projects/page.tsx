@@ -83,7 +83,7 @@ export default async function ProjectsOverviewPage(props: PageProps) {
           Projects Overview
         </h1>
         <Link 
-          href="/projects/create" 
+          href="/dashboard/projects/new" 
           className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium text-sm rounded-md shadow-sm transition-colors"
         >
           + Add Project
@@ -92,6 +92,12 @@ export default async function ProjectsOverviewPage(props: PageProps) {
       <p className="text-gray-600 dark:text-gray-300 mb-6">
         Welcome to the projects area. Use the panel below to filter records by keywords or technology stack tags.
       </p>
+
+      <div className="flex items-center gap-4 text-sm font-medium mb-6 text-gray-500 dark:text-gray-400 border-b border-gray-200 dark:border-gray-800 pb-4">
+        <Link href="/projects" className="text-blue-600 dark:text-blue-400 font-semibold underline underline-offset-4">All Projects</Link>
+        <Link href="/projects/opensource" className="hover:text-gray-900 dark:hover:text-white transition-colors">Open Source</Link>
+        <Link href="/projects/school" className="hover:text-gray-900 dark:hover:text-white transition-colors">School Projects</Link>
+      </div>
 
       <div className="mb-6">
         <ProjectSearch />
@@ -103,8 +109,6 @@ export default async function ProjectsOverviewPage(props: PageProps) {
         <>
           <div className="grid gap-6 sm:grid-cols-2">
             {projects.map((project) => {
-              const deleteProjectWithId = deleteProject.bind(null, project.id);
-
               return (
                 <div 
                   key={project.id} 
@@ -156,13 +160,13 @@ export default async function ProjectsOverviewPage(props: PageProps) {
 
                       <div className="flex items-center gap-3">
                         <Link
-                          href={`/projects/${project.id}/edit`}
+                          href={`/dashboard/projects/${project.id}/edit`}
                           className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 font-medium transition-colors"
                         >
                           Edit
                         </Link>
 
-                        <DeleteButton action={deleteProjectWithId} />
+                        <DeleteButton id={project.id} deleteAction={deleteProject} />
                       </div>
                     </div>
                   </div>

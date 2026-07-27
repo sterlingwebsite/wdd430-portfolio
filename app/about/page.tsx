@@ -3,11 +3,11 @@ import SkillCard from "@/components/SkillCard";
 export default function About() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 w-full">
-      <h2 className="text-3xl font-extrabold text-gray-900 mb-6 tracking-tight">
+      <h2 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-6 tracking-tight">
         About Me
       </h2>
 
-      <div className="space-y-4 text-gray-600 text-lg leading-relaxed mb-10">
+      <div className="space-y-4 text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-10">
         <p>
           Hi, I&apos;m Sterling Steele — a full‑stack developer learning modern
           web technologies like Next.js, React, TypeScript, and Tailwind CSS.
@@ -23,8 +23,8 @@ export default function About() {
         </p>
       </div>
 
-      <section className="border-t border-gray-100 pt-8 mb-10">
-        <h3 className="text-2xl font-bold mb-6 text-gray-900 tracking-tight">
+      <section className="border-t border-gray-100 dark:border-gray-800 pt-8 mb-10">
+        <h3 className="text-2xl font-bold mb-6 text-gray-900 dark:text-white tracking-tight">
           Technical Skills
         </h3>
         
@@ -41,7 +41,7 @@ export default function About() {
         </div>
       </section>
 
-      <p className="text-base italic text-gray-500 border-l-2 border-blue-500 pl-4 py-1">
+      <p className="text-base italic text-gray-500 dark:text-gray-400 border-l-2 border-blue-500 pl-4 py-1">
         Thanks for visiting — feel free to explore my projects on the home page.
       </p>
     </main>

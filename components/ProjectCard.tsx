@@ -7,13 +7,13 @@ interface ProjectCardProps {
         
 export default function ProjectCard({ title, description, technologies, link }: ProjectCardProps) {
   return (
-    <article className="flex flex-col justify-between p-6 bg-white border border-gray-100 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
+    <article className="flex flex-col justify-between p-6 bg-white dark:bg-gray-800/50 border border-gray-100 dark:border-gray-700/50 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200">
       <div>
-        <h3 className="text-xl font-bold text-gray-900 mb-2 tracking-tight">
+        <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 tracking-tight">
           {title}
         </h3>
         
-        <p className="text-gray-600 text-sm leading-relaxed mb-4">
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
           {description}
         </p>
         
@@ -21,7 +21,7 @@ export default function ProjectCard({ title, description, technologies, link }: 
           {technologies.map((tech) => (
             <span 
               key={tech} 
-              className="inline-block px-2.5 py-0.5 bg-gray-100 text-gray-700 text-xs font-medium rounded-md"
+              className="inline-block px-2.5 py-0.5 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 text-xs font-medium rounded-md"
             >
               {tech}
             </span>
@@ -30,12 +30,12 @@ export default function ProjectCard({ title, description, technologies, link }: 
       </div>
 
       {link && (
-        <div className="pt-2 border-t border-gray-50">
+        <div className="pt-2 border-t border-gray-50 dark:border-gray-700/50">
           <a 
             href={link} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 transition-colors"
+            className="inline-flex items-center text-sm font-semibold text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
           >
             View Project 
             <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">

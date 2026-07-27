@@ -26,3 +26,15 @@ export async function getProjectById(id: number): Promise<Project | null> {
   `;
   return rows[0] ?? null;
 }
+
+export async function getUserByEmail(email: string) {
+  if (email === "admin@example.com") {
+    return {
+      id: "1",
+      email: "admin@example.com",
+      name: "Admin Sterling",
+      passwordHash: "$2b$10$x8IWd4QcEAQXi0p0ZUg3qO43fUIEQaISQA167hDgKJj4k69UIknYG" 
+    };
+  }
+  return null;
+}

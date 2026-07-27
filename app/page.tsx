@@ -21,11 +21,11 @@ export default function Home() {
   return (
     <main className="max-w-4xl mx-auto px-4 py-12 w-full">
       
-      <section className="text-center py-8 md:py-12 border-b border-gray-100 mb-10">
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4 sm:text-5xl">
+      <section className="text-center py-8 md:py-12 border-b border-gray-100 dark:border-gray-800 mb-10">
+        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-4 sm:text-5xl">
           My Portfolio
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
           I&apos;m a full‑stack developer learning Next.js and React. Here are some of
           the projects I&apos;ve built recently, showcasing my experience with modern
           web technologies and deployment workflows.
@@ -33,7 +33,7 @@ export default function Home() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 tracking-tight text-center md:text-left">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight text-center md:text-left">
           Featured Projects
         </h2>
         <ProjectList projects={projects} />
